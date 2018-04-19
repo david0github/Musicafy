@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ser210.quinnipiac.edu.musicafy.MainMenuActivity">
+
+    <TextView
+        android:id="@+id/artistView"
+        android:layout_width="60dp"
+        android:layout_height="34dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="146dp"
+        android:text="Artist"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/songView"
+        android:layout_width="60dp"
+        android:layout_height="34dp"
+        android:layout_alignStart="@+id/artistView"
+        android:layout_below="@+id/search_button_0"
+        android:layout_marginTop="68dp"
+        android:text="Song"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/send_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/songView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:ems="10" />
+
+    <Button
+        android:id="@+id/search_button_0"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_below="@+id/artistView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:text="Search"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/search_button_1"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/search_button_0"
+        android:layout_marginBottom="56dp"
+        android:onClick="onSendMessage"
+        android:text="Search" />
+
+    <TextView
+        android:id="@+id/main_menu_title"
+        android:layout_width="175dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="92dp"
+        android:layout_marginTop="23dp"
+        android:text="Selection"
+        android:textSize="41sp" />
+
+</RelativeLayout>

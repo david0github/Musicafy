@@ -1,14 +1,16 @@
 package ser210.quinnipiac.edu.musicafy;
 
-import android.app.Activity;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.content.Intent;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 //import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class MainMenuActivity extends Activity implements View.OnClickListener {
+public class MainMenuActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button artistBtn;
 
@@ -16,6 +18,11 @@ public class MainMenuActivity extends Activity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setTitle("Selection");
 
         artistBtn = (Button) findViewById(R.id.search_button_0);
         artistBtn.setOnClickListener(this);

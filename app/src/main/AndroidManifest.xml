@@ -16,9 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainMenuActivity" />
-        <activity android:name=".MostPopularArtistActivity" />
-        <activity android:name=".SearchedSongActivity"></activity>
+        <activity android:name=".MainMenuActivity" android:parentActivityName=".HomeActivity"/>
+        <activity android:name=".MostPopularArtistActivity" android:parentActivityName=".MainMenuActivity" />
+        <activity android:name=".SearchedSongActivity" android:parentActivityName=".MainMenuActivity">
+        </activity>
     </application>
 
 </manifest>
